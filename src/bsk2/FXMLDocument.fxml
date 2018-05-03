@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="168.0" prefWidth="300" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="bsk2.FXMLDocumentController">
+    <children>
+        <Button fx:id="openButton" layoutX="20" layoutY="20" onAction="#handleButtonAction" text="Open File..." />
+        <Label fx:id="fileLabel" layoutX="120" layoutY="20" minHeight="16" minWidth="69" text="No file chosen" />
+
+        <Button fx:id="runButton" layoutX="20.0" layoutY="125.0" onAction="#handleButtonAction" text="Run" />
+        <Label fx:id="outputFilenameLabel" layoutX="20.0" layoutY="100.0" minHeight="16" minWidth="69" text="Output filename:" />
+        <TextField layoutX="120.0" layoutY="100.0" />
+      <RadioButton layoutX="65.0" layoutY="62.0" mnemonicParsing="false" text="ECB">
+         <toggleGroup>
+            <ToggleGroup fx:id="Mode" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="120.0" layoutY="62.0" mnemonicParsing="false" text="CBC" toggleGroup="$Mode" />
+      <RadioButton layoutX="174.0" layoutY="62.0" mnemonicParsing="false" text="CFB" toggleGroup="$Mode" />
+      <RadioButton layoutX="226.0" layoutY="62.0" mnemonicParsing="false" text="OFB" toggleGroup="$Mode" />
+      <Label layoutX="22.0" layoutY="62.0" text="Mode:" />
+      <!--
+        deszyfrowywanie
+        odbiorcy
+        wielkość bloku
+      -->
+    </children>
+</AnchorPane>
